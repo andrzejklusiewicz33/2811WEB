@@ -2,6 +2,7 @@ from faker import Faker
 faker=Faker("pl_PL")
 from domain import *
 import psycopg2
+import settings
 
 # def get_all():
 #     result=[]
@@ -12,7 +13,7 @@ import psycopg2
 
 def get_all():
     result=[]
-    with psycopg2.connect(host="localhost",port=5432,database="andrzej",user="andrzej",password="oracle") as connection:
+    with psycopg2.connect(host=settings.host, port=settings.port, database=settings.database, user=settings.user,password= settings.password) as connection:
         cursor=connection.cursor()
         cursor.execute('select * from pracownicy')
         for w in cursor:

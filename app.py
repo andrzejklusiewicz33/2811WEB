@@ -76,3 +76,5 @@ if __name__ == '__main__':
 #przerwa do 15:06
 
 #60. Zadbaj o to by lista produktów wyświetlala dane z bazy...
+
+#61. Zadbaj o to by dane do łączenia się z bazą w dao pochodziły z osobnego pliku settings.py
