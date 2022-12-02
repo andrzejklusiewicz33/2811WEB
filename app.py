@@ -7,6 +7,9 @@ app = Flask(__name__)
 def hello_world():  # put application's code here
     return 'Hello World!'
 
+@app.route('/tests')
+def tests():
+    return "Strona testowa - zmieniona SIEMA TU MAPET!"
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True,port=80)
