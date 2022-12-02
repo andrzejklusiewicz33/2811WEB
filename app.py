@@ -33,3 +33,5 @@ if __name__ == '__main__':
 
 
 #przerwa do 11:45
+
+#54. Zadbaj o to, by na wszystkich ekranach bylo menu z linkami do wszystkich podstron
