@@ -9,7 +9,7 @@ def hello_world():  # put application's code here
 
 @app.route('/tests')
 def tests():
-    return "Strona testowa - zmieniona SIEMA TU MAPET!"
+    return "<h1>Strona testowa - zmieniona SIEMA TU MAPET!</h1>"
 
 
 
