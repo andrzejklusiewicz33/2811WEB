@@ -5,15 +5,15 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return '<h1>Strona główna</h1>'
+    return render_template("index.html")
 
 @app.route('/show_products')
 def show_products():
-    return "<h1>Lista produktów</h1>"
+    return render_template("show_products.html")
 
 @app.route('/about')
 def about():
-    return "<h1>O programie</h1>"
+    return render_template("about.html")
 
 @app.route('/tests')
 def tests():
@@ -30,3 +30,6 @@ if __name__ == '__main__':
 #Włącz tryb debug dla swojej aplikacji
 
 #53. Zadbaj o to by każdy z ekranów pokazywał swój plik html z odpowiednim nagłówkiem
+
+
+#przerwa do 11:45
