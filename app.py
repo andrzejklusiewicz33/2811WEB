@@ -100,3 +100,6 @@ if __name__ == '__main__':
 #63. Dodaj do product_dao funkcję get_one(id) która zwróci pojedynczy obiekt klasy Product na podstawie
 #id z bazy danych. Po wejsciu na ekran szczegolow produktu na konsoli powinien pojawic sie
 #obiekt odebrany z dao.
+
+#SQLAlchemy
+#klusiewicz@jsystems.pl
