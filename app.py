@@ -11,5 +11,12 @@ def hello_world():  # put application's code here
 def tests():
     return "Strona testowa - zmieniona SIEMA TU MAPET!"
 
+
+
 if __name__ == '__main__':
     app.run(debug=True,port=80)
+
+#52. Dodaj funkcje obslugujaca requesty na adresy: /show_products /about
+#Zmien nazwę funkcji obslugujacej stronę główną na index(). Każda z funkcji
+#powinna użytkownikowi wyświetlić jakiś tekst informujacy gdzie jest.
+#Włącz tryb debug dla swojej aplikacji
