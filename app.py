@@ -13,9 +13,7 @@ def index():
 
 @app.route('/show_products')
 def show_products():
-    for p in pdao.get_all():
-        print(p)
-    return render_template("show_products.html")
+    return render_template("show_products.html",products=pdao.get_all())
 
 
 
@@ -74,3 +72,7 @@ if __name__ == '__main__':
 #Zadbaj o to by po wejsciu na liste produktow nadal wyswietlaly sie na konsoli dane
 
 #59. Zadbaj o to by na ekranie /show_products pojawiły się dane pochodzące z DAO
+
+#przerwa do 15:06
+
+#60. Zadbaj o to by lista produktów wyświetlala dane z bazy...
