@@ -17,7 +17,9 @@ def about():
 
 @app.route('/tests')
 def tests():
-    return render_template("tests.html")  #"<h1>Strona testowa - zmieniona SIEMA TU MAPET!</h1>"
+    x=99
+    krotka=("Python",'Java','PL/SQL','PL/pgSQL')
+    return render_template("tests.html",zmienna=x, jezyki=krotka)  #"<h1>Strona testowa - zmieniona SIEMA TU MAPET!</h1>"
 
 
 
@@ -35,3 +37,5 @@ if __name__ == '__main__':
 #przerwa do 11:45
 
 #54. Zadbaj o to, by na wszystkich ekranach bylo menu z linkami do wszystkich podstron
+
+#55. Przekaż do widoku ekranu /about swoje imię, nazwisko i email i wyświetl na widoku w tabeli

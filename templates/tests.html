@@ -7,6 +7,26 @@
 <body>
 {% include 'menu.html' %}
 <h3>Testy</h3>
+{{ zmienna }}
+<br>
+{{ jezyki }}
+<ol>
+{% for j in jezyki %}
+    <li>{{ j }}</li>
+    {% endfor %}
+</ol>
+
+<table border="1">
+    <tr>
+        <th>Imię</th><td>----</td>
+    </tr>
+    <tr>
+        <th>Nazwisko</th><td>----</td>
+    </tr>
+    <tr>
+        <th>Email</th><td>----</td>
+    </tr>
+</table>
 
 </body>
 </html>
