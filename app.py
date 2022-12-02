@@ -1,7 +1,8 @@
-from flask import Flask,render_template
+from flask import Flask,render_template,request
 from domain import *
 import employees_dao as edao
 import product_dao as pdao
+
 
 app = Flask(__name__)
 
@@ -27,6 +28,11 @@ def about():
 @app.route('/show_employees')
 def show_employees():
     return render_template("show_employees.html",employees=edao.get_all())
+@app.route('/employee_details')
+def employee_details():
+    id=request.args.get('id')
+    print(f'szczegóły pracownika o id={id}')
+    return render_template("employee_details.html")
 
 
 @app.route('/tests')
@@ -78,3 +84,7 @@ if __name__ == '__main__':
 #60. Zadbaj o to by lista produktów wyświetlala dane z bazy...
 
 #61. Zadbaj o to by dane do łączenia się z bazą w dao pochodziły z osobnego pliku settings.py
+
+#62. Dodaj link prowadzący do ekranu szczegółów produktu
+#Dodaj ekran obsługujący wejscie na szczegoly produktu. Po wejsciu na ten ekran na konsoli powinien
+#sie pokazac numer id_produktu odczytany z paska, a kontroller powinien pokazac wlasciwy plik html
