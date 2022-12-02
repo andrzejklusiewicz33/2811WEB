@@ -19,8 +19,8 @@ def show_products():
 @app.route('/product_details')
 def product_details():
     id=request.args.get('id')
-    print(f'szczegóły produktu o id={id}')
-    return render_template("product_details.html")
+    product=pdao.get_one(id)
+    return render_template("product_details.html",product=product)
 
 @app.route('/about')
 def about():
