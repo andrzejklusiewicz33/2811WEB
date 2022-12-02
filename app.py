@@ -13,13 +13,21 @@ def show_products():
 
 @app.route('/about')
 def about():
-    return render_template("about.html")
+    return render_template("about.html",first_name="Andrzej",last_name="Klusiewicz",email="klusiewicz@jsystems.pl")
+
+class Owoc:
+    def __init__(self,nazwa,kolor):
+        self.nazwa=nazwa
+        self.kolor=kolor
+    def __str__(self):
+        return str(self.__dict__)
 
 @app.route('/tests')
 def tests():
     x=99
     krotka=("Python",'Java','PL/SQL','PL/pgSQL')
-    return render_template("tests.html",zmienna=x, jezyki=krotka)  #"<h1>Strona testowa - zmieniona SIEMA TU MAPET!</h1>"
+    owoc=Owoc('Banan','Żółty')
+    return render_template("tests.html",zmienna=x, jezyki=krotka,owoc=owoc)
 
 
 
@@ -39,3 +47,8 @@ if __name__ == '__main__':
 #54. Zadbaj o to, by na wszystkich ekranach bylo menu z linkami do wszystkich podstron
 
 #55. Przekaż do widoku ekranu /about swoje imię, nazwisko i email i wyświetl na widoku w tabeli
+
+#56. Stwórz klasę Author i dodaj do niej konstruktor sparametryzowany. Klasa powinna
+#posiadać pola first_name,last_name,email. W kontrolerze ekranu /about stwórz obiekt tej klasy,
+#przekaż go do widoku i wyświetl dane z niego zamiast korzystac ze zmiennych z poprzedniego cwiczenia
+#przekazywanie zmiennych z poprzedniego cwiczenia mozessz wtedy usunac
